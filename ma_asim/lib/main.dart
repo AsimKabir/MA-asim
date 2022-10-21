@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ma_asim/screens/appointmentScreen.dart';
+import 'package:ma_asim/screens/findADoctorScreen.dart';
 import 'package:ma_asim/screens/healthzoneScreen.dart';
 import 'package:ma_asim/screens/homeScreen.dart';
 import 'package:ma_asim/screens/medicalRecordsScreen.dart';
+import 'package:ma_asim/screens/myProfileScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -176,7 +178,10 @@ class customDrawer extends StatelessWidget{
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text('My Profiles'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => myProfileScreen()),
+              );
             },
           ),
           Divider(

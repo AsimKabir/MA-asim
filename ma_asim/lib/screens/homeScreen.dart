@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ma_asim/screens/findADoctorScreen.dart';
 
 class homeScreen extends StatelessWidget {
   @override
@@ -204,7 +205,7 @@ iWantToBookCard() {
 
 searchForDoctors() {
   return Padding(
-    padding: const EdgeInsets.all(8.0),
+    padding: EdgeInsets.all(8.0),
     child: (Container(
         decoration: BoxDecoration(
           border: Border.all(
@@ -213,7 +214,7 @@ searchForDoctors() {
           color: Colors.white70,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -222,7 +223,7 @@ searchForDoctors() {
                 children: [
                   Column(
                     children: [
-                      const CircleAvatar(
+                       CircleAvatar(
                         backgroundImage: AssetImage('assets/images/cat3.png'),
                       ),
                       Text("Gynecolog")
@@ -233,7 +234,7 @@ searchForDoctors() {
                   ),
                   Column(
                     children: [
-                      const CircleAvatar(
+                       CircleAvatar(
                         backgroundImage: AssetImage('assets/images/cat3.png'),
                       ),
                       Text("Gynecolog")
@@ -244,7 +245,7 @@ searchForDoctors() {
                   ),
                   Column(
                     children: [
-                      const CircleAvatar(
+                       CircleAvatar(
                         backgroundImage: AssetImage('assets/images/cat3.png'),
                       ),
                       Text("Gynecolog")
@@ -255,10 +256,12 @@ searchForDoctors() {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Colors.grey,
-                  minimumSize: const Size.fromHeight(30), // NEW
+                  minimumSize:  Size.fromHeight(30), // NEW
                 ),
-                onPressed: () {},
-                child: const Text(
+                onPressed: () {
+                  // Navigator.pushNamed(context, "/findADoctorScreen");
+                },
+                child: Text(
                   'All Specalization',
                   style: TextStyle(fontSize: 12, color: Colors.deepPurple),
                 ),
