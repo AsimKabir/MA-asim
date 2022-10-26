@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ma_asim/screens/appointmentScreen.dart';
+import 'package:ma_asim/screens/editProfileScreen.dart';
 import 'package:ma_asim/screens/findADoctorScreen.dart';
 import 'package:ma_asim/screens/healthzoneScreen.dart';
 import 'package:ma_asim/screens/homeScreen.dart';
 import 'package:ma_asim/screens/medicalRecordsScreen.dart';
 import 'package:ma_asim/screens/myProfileScreen.dart';
+import 'package:ma_asim/screens/recentDoctorsScreen.dart';
+import 'package:ma_asim/screens/walletScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -164,7 +167,12 @@ class customDrawer extends StatelessWidget{
                 color: Colors.green,
               ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => editProfileScreen()),
+                    );
+                  },
                   style: TextButton.styleFrom( //<-- SEE HERE
                     side: BorderSide(width: 3.0),
                     backgroundColor: Colors.blue
@@ -191,7 +199,10 @@ class customDrawer extends StatelessWidget{
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text('Recent Doctors'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => recentDoctorsScreen()),
+              );
             },
           ),
           Divider(
@@ -201,7 +212,10 @@ class customDrawer extends StatelessWidget{
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text('Wallet'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => walletScreen()),
+              );
             },
           ),
           Divider(
